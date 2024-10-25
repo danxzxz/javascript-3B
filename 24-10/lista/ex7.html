@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+   
+
+</head>
+<body>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+
+            min-width: 200px;
+            height: 800px;
+        }
+
+    </style>
+
+    <img src="https://i.pinimg.com/564x/a3/42/0b/a3420bf68d36a4abf25f16071802a95b.jpg" alt="S1e13_Boss_Mabel">
+
+    <h2></h2>
+
+    <script>
+
+    const texto = document.querySelector('h2');
+
+    const imagem = document.querySelector('img');
+
+    imagem.addEventListener('mouseenter', function(){
+
+        texto.innerText = "Ei oque  é isso sai daqui!!";
+
+        console.log(texto);
+    });
+
+    imagem.addEventListener('mouseleave', function(){
+
+    texto.innerText = "Finalmente você parou!!";
+
+
+    });
+
+    imagem.addEventListener('mousemove', function(){
+
+    texto.innerText = "Você está me deixando tontaaa";
+
+    });
+
+    imagem.addEventListener('click', function(){
+
+    texto.innerText = "Para de ficar clicando que saco!!";
+
+    });
+
+
+
+    </script>
+    
+</body>
+</html>
