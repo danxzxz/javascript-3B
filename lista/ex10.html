@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .erro {
+            color: tomato;
+            display: none;
+        }
+
+        .grupo {
+            padding: 10px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input.invalido {
+            border: solid 2px tomato;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        
+        <div class="grupo">
+            <input type="text" placeholder="informe seu nome">
+            <span class="erro">o nome deve ter pelo menos três caracteres</span>
+        </div>
+
+        <div class="grupo">
+            <input type="text" placeholder="inform seu e-mail">
+            <span class="erro">o email precisa ser válido</span>
+        </div>
+
+        <div class="grupo">
+            <input type="password" placeholder="informe sua senha">
+            <span class="erro">a senha precisa ter 8 caracteres </span>
+        </div>
+
+        <div class="grupo">
+            <input type="password" placeholder="confirme sua senha">
+            <span class="erro">a confirmação não corresponde à senha</span>
+        </div>
+
+        <div class="grupo">
+            <input type="submit" value="enviar">
+        </div>
+
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const erros = document.querySelectorAll('.erro') 
+
+        function validaNome(){
+            if(inputs[0].value.length <= 3){
+                console.log("digitou")
+                erros[0].style.display = 'block'
+                inputs[0].classList.add('invalido')
+            } else {
+                erros[0].style.display = 'none'
+                inputs[0].classList.remove('invalido')
+            }
+        }
+
+        inputs[0].addEventListener('input', validaNome)
+
+
+        function validaEmail(){
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if(emailRegex.test())
+        }
+    </script>
+
+</body>
+</html>
