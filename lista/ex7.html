@@ -4,73 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
-   
-
 </head>
 <body>
 
     <style>
-
         *{
             margin: 0;
             padding: 0;
+
             box-sizing: border-box;
         }
-
         body{
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
 
+            display: flex;
+            flex-direction: column;
+        }   
         img{
 
             min-width: 200px;
-            height: 800px;
+            height: 650px;
         }
 
     </style>
 
-    <img src="https://i.pinimg.com/564x/a3/42/0b/a3420bf68d36a4abf25f16071802a95b.jpg" alt="S1e13_Boss_Mabel">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdFqRY2jffbH8S7RmII21RmJTTSsFQRlmR9w&s" alt="S1e13_Boss_Mabel">
 
-    <h2></h2>
+    <h1></h1>
 
     <script>
 
-    const texto = document.querySelector('h2');
-
+    const texto = document.querySelector('h1');
     const imagem = document.querySelector('img');
 
     imagem.addEventListener('mouseenter', function(){
 
-        texto.innerText = "Ei oque  é isso sai daqui!!";
-
-        console.log(texto);
+        texto.innerText = "Oque é isso??? Tira isso daqui!";
     });
 
     imagem.addEventListener('mouseleave', function(){
 
-    texto.innerText = "Finalmente você parou!!";
-
-
+    texto.innerText = "Ufa...ainda bem que você tirou";
     });
 
     imagem.addEventListener('mousemove', function(){
 
-    texto.innerText = "Você está me deixando tontaaa";
-
+    texto.innerText = "Eu ja estou ficando tooonto";
     });
 
     imagem.addEventListener('click', function(){
 
-    texto.innerText = "Para de ficar clicando que saco!!";
-
+    texto.innerText = "Para de me cutucar!!!!!!!";
     });
-
-
 
     </script>
     
